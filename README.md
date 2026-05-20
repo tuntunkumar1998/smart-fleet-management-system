@@ -1,4 +1,4 @@
-## Week 1: Fleet Schema Design and Database Initialization
+ Fleet Schema Design and Database Initialization
 
 During Week 1, the Fleet Management project focuses on backend foundation setup. The relational schema is designed in MySQL and integrated with the Spring Boot application using Spring Data JPA.
 
