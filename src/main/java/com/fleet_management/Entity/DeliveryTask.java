@@ -1,0 +1,32 @@
+package com.fleet_management.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table (name = "delivery_tasks")
+public class DeliveryTask {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+    private String customerName;
+
+    private String deliveryAddress;
+
+    private String deliveryStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "route_id")
+    private Route route;
+	
+}
