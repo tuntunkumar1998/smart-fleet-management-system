@@ -1,6 +1,8 @@
 package com.fleet_management.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,10 +25,15 @@ public class DeliveryTask {
 
     private String deliveryAddress;
 
-    private String deliveryStatus;
+    @Enumerated(EnumType.STRING)
+    private DeliveryStatus status;
 
     @ManyToOne
     @JoinColumn(name = "route_id")
     private Route route;
-	
+
+    public DeliveryTask() {
+    }
+    
+    
 }
