@@ -12,3 +12,23 @@ RESTful APIs are created for:
 * Managing fleet records
 
 The backend configuration includes MySQL datasource setup, Hibernate JPA configuration, and layered architecture implementation using Controller, Service, Repository, and Entity packages.
+
+
+## Dispatch Workflow and State Management
+
+The Dispatch Workflow module automates delivery assignment operations by linking optimized routes with drivers and vehicles. A delivery state machine manages the lifecycle of delivery tasks through states such as UNASSIGNED, DISPATCHED, IN_TRANSIT, and DELIVERED.
+
+Robust exception handling is implemented using @RestControllerAdvice to gracefully manage invalid address inputs, API rate limits, and unexpected application errors.
+
+#Spring Boot REST API Project
+- Driver Management
+- Vehicle Management
+- Route Optimization
+- Delivery Status Tracking
+
+## Tech Stack
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- MySQL / Oracle
+- Postman
